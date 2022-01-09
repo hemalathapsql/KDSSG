@@ -1,0 +1,53 @@
+Database Administrator (DBA) is usually described as an IT professional who manages Microsoft SQL Server, Oracle databases, MySQL, IBM DB2 and/or Postgres databases which includes installs relational database software, provisions users’ access to the databases, secures data, tunes database performance, disaster recovery, etc. as a full-time employee.
+
+Depending on the organization where you work, the Database Administrators work as a member of the IT Operations Team, the Application Support Team or part of the Software Development Team working with Programmers \ Developers. Regardless of the team, DBAs usually interact with all other IT teams and often with the business as well.
+
+You can learn about the Database Administrator’s role from job descriptions which will vary from site to site. Here are some links with examples of the Database Administrator’s job description:
+
+Database Administrators
+What Does a Database Administrator Do?
+Database administrator job description sample
+Note, that some job descriptions are for a Systems DBAs working more on the physical side of administration, others are for an Application DBA working more on development, database design, database structures, database programming languages (T-SQL or SQL (Structured Query Language), Python, SSIS, etc.), etc.
+
+In this tip, we will talk about Systems DBA who works with SQL databases.
+
+Find out about what other types of jobs are related to SQL Server.
+Read another tip about What does it mean to be a SQL Server DBA.
+Read more about What is a Database Administrator.
+Do I need a Database Administrator? Why is this important to the Organization?
+Some small companies that only use externally hosted applications or don’t have in-house IT may not have a DBA. Very often, when a company grows, it starts implementing new applications with databases. Sometimes a person who is looking after IT infrastructure (usually a sysadmin, sometimes a developer) may have some knowledge about database administration and he/she provides basic database support.
+
+But even if a company has only one database it doesn’t mean they don’t need a DBA. It all depends on the database size, complexity, compliance and availability requirements.  The company’s image might be damaged if they lose customer’s data or if database-related issues cause disruptions of client-facing applications. Some bad scenarios include losing clients or facing penalties.
+
+DBAs make sure that data is secure, is available, and that even large databases perform well. Without a DBA, a company may not be able to resolve critical database issues on time or may not be able to solve them fully (if database backups are missing or unusable). Just like most things that require professional service, databases also need someone who has adequate knowledge and skills.
+
+Read about a Microsoft SQL Server DBAs' Value to the Organization.
+Who should be a database administrator?
+If you like to work with data, have great analytical skills, and have good troubleshooting skills, being a Database Administrator might be a good fit for you. You may or may not have an Information Technology (IT) background, but a Bachelor's degree in Computer Science or Information Systems is beneficial for entry-level positions in many organizations. You need to like technology, be detail-oriented and learn quickly. As with any other IT-related role, a DBA job involves a lot of learning if you want to be a good DBA. Read this tip about the key qualities of a SQL Server DBA.
+
+How do I become a database administrator?
+There is no single direction on how to become a DBA. You can start differently than 10 other DBAs you know, but here are 3 of the most common ways:
+
+You don’t have any IT background, but you learned about a DBA job and want to become a DBA. You study (take official courses, for example) or self-study (read books and blogs, watch webinars, etc.). You may also try to prepare and pass certification exams (even though it might be pretty hard without any experience).
+The second way is to enroll in a college or university in an IT program as a portion of a Bachelor's Degree or Master's Degree. Some educational institutions provide DBA fast tracks.
+The other way is if you already have IT work experience and have some exposure to the databases. You might have worked closely with a DBA or had to do some database-related tasks (if there is no DBA in your team). Having some IT background is going to help you as DBAs need to have an understanding of Windows or Linux Operating Systems (OS), networking, and other parts of the database underlining infrastructure such as storage, programming or data analysis.
+Regardless of the way you start you can find many online resources for self-study.
+
+Here are some starting points (web sites) you can use:
+
+MSSQLTips SQL Server Tutorials
+Microsoft Learn provides some free modules. Some of them include hands-on labs: Exercise: Identify issues with a database design
+Microsoft SQL Server Technical Documentation
+There are also free courses available online. An example is Free Online Databases Courses.
+There is a huge number of blogs and community resources. Try to read user questions and find answers. You don’t necessarily have to post them, but you will learn something new when you look for the answers.
+
+Read this tip about SQL Server training on a budget.
+Here is a full category of tips about professional development.
+You can check these online resources as well for extra information:
+
+8 Simple Steps For How to Become a Database Administrator
+How to Become a Database Administrator
+Enhance Your SQL Server Career
+How much does a database administrator get paid?
+DBA’s salary is determined by many things – country, experience, responsibilities, roles, type of a Database Management System (DBMS) managed (Oracle vs. SQL Server vs. both), how big and complex the database environment is, how many DBAs are in the team, etc.
+
