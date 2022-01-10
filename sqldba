@@ -1,0 +1,115 @@
+Pre-Migration Checklist
+
+Analyze the disk space of the target server for the new database, if the disk space is not enough add more space on the target server
+Confirm the data and log file location for the target server
+Collect the information about the Database properties (Auto Stats, DB Owner, Recovery Model, Compatibility level, Trustworthy option etc)
+Collect the information of dependent applications, make sure application services will be stopped during the database migration
+Collect the information of database logins, users and their permissions. (Optional)
+Check the database for the Orphan users if any
+Check the SQL Server for any dependent objects (SQL Agent Jobs and Linked Servers)
+Check, if the database is part of any maintenance plan
+	Database Migration Checklist
+
+These are the steps you would go through to make the change.
+
+1. Stop the application services
+2. Change the database to read-only mode (Optional)
+
+-- Script to make the database readonly
+USE [master]
+GO
+ALTER DATABASE [DBName] SET  READ_ONLY WITH NO_WAIT
+GO
+ALTER DATABASE [DBName] SET  READ_ONLY 
+GO
+3. Take the latest backup of all the databases involved in migration
+
+4. Restore the databases on the target server on the appropriate drives
+
+5. Cross check the database properties as per the database property script output, change the database properties as per the pre migration- checklist
+
+Script to Change DB Owner
+
+This will change the database owner to "sa".  This can be used to change to any owner you would like.
+
+ USE databaseName
+EXEC sp_changedbowner 'sa'
+Script to Turn on Trustworthy Option
+
+If trustworthy option was set, this will turn it on for the database.
+
+ ALTER DATABASE database_name SET TRUSTWORTHY ON
+Script to Change the Database Compatibility Level
+
+When you upgrade to a new version, the old compatibility level will remain.  This script shows how to change the compatibility level to SQL Server 2005 compatibility .
+
+6. Execute the output of Login transfer script on the target server, to create logins on the target server you can get the code from this technet article: http://support.microsoft.com/kb/246133.
+
+7. Check for Orphan Users and Fix Orphan Users
+
+Script to Check and Fix Orphan Users
+
+8. Execute DBCC UPDATEUSAGE on the restored database.
+
+Run the DBCC UPDATEUSAGE command against the migrated database when upgrading to a newer version of SQL Server.
+
+DBCC UPDATEUSAGE('database_name') WITH COUNT_ROWS
+DBCC CHECKDB 
+OR
+DBCC CHECKDB('database_name') WITH ALL_ERRORMSGS
+9. Rebuild Indexes (Optional) As per the requirement and time window you can execute this option.
+
+Take a look at this tip to rebuild all indexes.
+
+This will rebuild or reorganize all indexes for a particular table.
+
+Index Rebuild :- This process drops the existing Index and Recreates the index.
+Index Reorganize :- This process physically reorganizes the leaf nodes of the index.
+
+-- Script for Index Rebuild
+USE [DBName];
+GO
+ALTER INDEX ALL ON [ObjectName] REBUILD
+GO
+-- Script for Index Reorganize
+USE AdventureWorks;
+GO
+ALTER INDEX ALL ON [ObjectName] REORGANIZE
+GO
+10. Update index statistics
+
+sp_updatestats
+11. Recompile procedures
+
+Take a look at this tip to recompile all objects.
+
+This will recompile a particular stored procedure.
+
+sp_recompile 'procedureName'
+12. Start the application services, check the application functionality and check the Windows event logs.
+
+13. Check the SQL Server Error Log for login failures and other errors
+
+Take a look at this tip on how to read SQL Server error logs.
+
+EXEC xp_readerrorlog 0,1,"Error",Null
+14. Once the application team confirms that application is running fine take the databases offline on the source server or make them read only
+
+-- Script to make the database readonly
+USE [master]
+GO
+ALTER DATABASE [DBName] SET  READ_ONLY WITH NO_WAIT
+GO
+ALTER DATABASE [DBName] SET  READ_ONLY 
+GO
+-- Script to take the database offline
+EXEC sp_dboption N'DBName', N'offline', N'true'
+OR
+ALTER DATABASE [DBName] SET OFFLINE WITH
+ROLLBACK IMMEDIATE
+Next Steps
+Test the process to determine how much time and disk space would be needed by using the backup and recovery process.
+Meet with your technical and business teams to find out how much time is available for the migration and plan the activity
+Design the rollback plan, if the application is not working fine
+Add more migration cases in your checklist, for example check if the database requires any server level change (For example CLR, XP_Cmdshell etc)
+Some of these scripts give you the base command to update a portion of the data, enhance the process to hit each object in your database.
