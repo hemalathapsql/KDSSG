@@ -1,0 +1,8 @@
+Git and other version control systems give software developers the power to track, manage, and organize their code.
+
+In particular, Git helps developers collaborate on code with teammates; combining powerful features like commits and branches with specific principles and strategies helps teams organize code and reduce the time needed to manage versioning.
+
+Of course, every developer and development team is different, with unique needs. Here is where a Git branching strategy comes in.
+
+We will be covering three fairly popular Git branch strategies, each with their own benefits. The best part? None of these workflows are set in stone and can, and should, be modified to fit your specific environment and needs.
+
