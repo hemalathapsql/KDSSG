@@ -1,0 +1,80 @@
+ADVANTAGES OF SQL SERVER
+Easy to Install
+Enhanced Performance
+Several SQL Server Editions
+Highly Secure
+Excellent Data Restoration and Recovery Mechanism
+Lower Cost Of Ownership
+Easy to Install
+Microsoft SQL is easy to use and can be installed via setup wizard. Unlike other database servers requiring extensive command-line configurations, SQL server offers a user-friendly installation interface. Besides the one-click installation process, it comes with a readable GUI along with lots of instructions. The prerequisite updates are downloaded by the installation wizard automatically, which reduces manual workloads. Automatic updates not only reduces the maintenance cost but also helps to maintain the database with the current trend. Analytical and database services can be installed separately later.
+
+Enhanced Performance
+With built-in transparent data compression and encryption features, SQL server offers enhanced performance. To secure and encrypt the data, users need not modify programs. SQL Server provides efficient permission management tools with access controls designed to help users secure sensitive business information.
+
+Several SQL Server Editions
+MS SQL Server comes in several editions to cater to the needs of corporate enterprises and domestic and remote users. Different editions vary in features and price range. Therefore, organizations can choose the version suitable for their operational needs. The editions include:
+
+Enterprise – This edition is usually for larger enterprises with greater data storage requirements. It provides data warehousing and web-enabled databases. Enterprise-grade SQL server offers the essential features an organization expects.
+Standard – Standard SQL Server edition is best for small- and medium-scale businesses. Moreover, it can be used for branch offices and small web servers as a back-end database. The standard version has no user limits.
+Express – Express SQL server edition is free of cost, has limited user capacity, and includes fewer features compared to standard and enterprise SQL server edition.
+Developer – The developer SQL server edition works and functions exactly like an enterprise SQL edition. The only difference is the license is used for testing and development purposes. This edition is generally used by developers to build and test applications on top of the SQL server.
+Highly Secure
+The SQL Server database is highly secure and uses sophisticated encryption algorithms making it virtually impossible to break the security layers. SQL Server is a commercial relational database with additional security features to reduce the risk of attacks.
+
+Excellent Data Restoration and Recovery Mechanism
+SQL Server consists of several sophisticated features to help restore and recover lost or damaged data. With the help of advanced recovery tools, it’s possible to recover the complete database. The core component of SQL Server, Database Engine, controls data storage and helps to execute demands and queries of the users, including transactions, files, and indexes. Large organizations commonly use these facilities of SQL Server.
+
+Lower Cost Of Ownership
+The effective data mining, disk partitioning, and data management tools of SQL server help to maintain the crucial data and make the storage space available for highly sensitive information.
+
+SQL SERVER BEST PRACTICES
+Use Advanced Firewall
+Use a Separate SSD Persistent Disk
+Monitor Transaction Logs
+Schedule Backups of the Transaction Log
+Defragment Indexes
+Format Secondary Disks
+Perform Backups Regularly
+Use Monitoring Tools
+Test Configuration
+Enable Table and Index Compression
+Use Advanced Firewall
+Setting up Windows Firewall in a SQL Server environment is an important security measure every organization needs to implement. Configuring firewalls on a single SQL Server machine enables IT teams to connect to the other client machines so traffic can easily flow in. This firewall rule helps to specify the IP address of the client’s machine.
+
+Use a Separate SSD Persistent Disk
+By default, the SQL server comes preconfigured, meaning it has everything installed on the boot persistent disk mounted on the C: drive. Having an additional or secondary SSD persistent disk helps to store log files and sensitive business data, so it remains secure even if the user deletes the instances.
+
+Monitor Transaction Logs
+One of the major causes of intermittent database slowdowns and its poor performance is the unmanaged growth of transaction logs. Therefore, monitoring the growth of transaction logs on every system is important. It can be done by disabling autogrowth. Besides, setting the log files to a fixed size based on the average of daily log accumulation helps manage transaction logs.
+
+Schedule Backups of the Transaction Log
+Even if the teams can manage logs easily using growth settings, scheduling regular backups of transaction logs is important. Backup of log files not only restores the crucial data in case of data loss but also allows the system to reuse the existing file space by replacing the old log entries. This helps in the maintenance of log files and eliminates the risk of performance issues during peak traffic times.
+
+Defragment Indexes
+Fragmented indexes can lead to poor performance of the database and queries involved. With a regular maintenance schedule, the fragmentation of indexes can be controlled. Using a defragmentation method on a regular basis helps reorganize the indexes available on heavily modified tables. To collect data from the number of indexes on modified tables and their fragmentation percentage, teams can run T-SQL script on the database.
+
+Format Secondary Disks
+SQL Server stores the crucial data in storage units known as extents. These extents are made up of eight memory pages, each having a size of 8 KB, making the overall extent size of 64 KB. When the secondary disk is formatted, it gives a huge space (64 KB) to the SQL Server to read and write extents more efficiently, which increases the performance of the disk. Formatting can be done by running PowerShell commands.
+
+Perform Backups Regularly
+Having a proper understanding of a solid backup, maintenance, and recovery plan is most crucial. A good backup helps to restore and recover your sensitive business information from the disasters. It also protects the critical business data from unusual database upgrades causing table corruptions and other unintentional system issues. While taking regular database backups, make sure not to consume a huge amount of persistent disk—Input Output Operations Per Second (IOPS). Instead, use a local SSD for backups capable of being further pushed to the cloud for secure storage.
+
+Use Monitoring Tools
+Database monitoring helps find performance issues, applications issues, device issues, and more. Finding issues proactively helps teams keep the database healthy and accessible. Monitoring databases helps to keep track of various components such as storage availability, resource consumption, measurement of throughput, Monitor Expensive Queries, track database changes, and monitor logs. Using data collection capabilities offered by advanced monitoring tools, users can tune specific information they need to monitor. However, choosing a monitoring tool is a challenging task, with so many options available. It’s advisable to make an informed decision, keeping in mind the business requirements, budget, and the features a business would be more likely to use.
+
+Test Configuration
+Setting up a new database server comes along with several challenges. Teams need to explore database features, functionalities, and how it’s used to make the most out of it. Before starting to use a database, it’s advisable to validate the configuration and run several performance tests before the final usage. There are free SQL Server health check scripts available for evaluating the SQL Server configurations to validate it performs as expected.
+
+Enable Table and Index Compression
+Although this might seem unusual, compressing tables and indexes can indeed increase the speed and performance of the system. The process takes a small amount of CPU cycle to compress the data. This helps to remove free disk space required to read and write bigger blocks. The less space, the better the database performance. Index compressions eliminate the duplicate copies of the predefined number of indexes on both cache and disk.
+
+SQL SERVER ISSUES
+The SQL Server database is a critical component of various small, medium, and large enterprises. If the business network, application, and system performance are slowing down, there may be an issue. In most cases, performance issues are related to databases for which organizations need to drill down and find out the actual faults. Organizations can also plan the diagnosis and tuning of various components using SQL monitoring tools to detect server issues in a streamlined way. SQL Server pain points such as insufficient indexing, memory usage, deadlocks, and security breaches are considered the most common issues that can easily be taken care of with SQL monitoring tools.
+
+5 BEST SQL SERVER MONITORING TOOLS
+There are a plethora of SQL Server tools organizations can use to monitor and secure the health of their database. These performance tools consist of rich features such as customized dashboards, summarized reports, and real-time alerts. The best thing about using a database monitoring tool is it’s extremely easy to use. Let’s take a look at some of the top SQL Server monitoring tools used by most organizations.
+
+SolarWinds Database Performance Analyzer (DPA)
+SQL Sentry
+Paessler SQL Monitoring Software
+dbWatch Database Control
